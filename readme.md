@@ -532,12 +532,12 @@ public SortedList<DateTime, ViewData> ViewHistory { get; private set; } = new So
 /// </summary>
 public ViewData LastViewData
 {
-get
-{
-    var newest = ViewHistory.Max(item => item.Key);
-    if (newest != default) return ViewHistory[newest];
-    else return null;
-}
+    get
+    {
+        var newest = ViewHistory.Max(item => item.Key);
+        if (newest != default) return ViewHistory[newest];
+        else return null;
+    }
 }
 
 /// <summary>
